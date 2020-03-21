@@ -6,7 +6,7 @@ plugins {
 }
 
 group = "com.github.lppedd"
-version = "0.1.0"
+version = "0.2.0"
 
 repositories {
   maven("https://dl.bintray.com/kotlin/kotlin-eap")
@@ -15,6 +15,7 @@ repositories {
 
 intellij {
   version = "IU-2019.3"
+  pluginName = "Kotlin Additional Highlighting"
   setPlugins("Kotlin")
 }
 
