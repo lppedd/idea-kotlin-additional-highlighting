@@ -25,19 +25,22 @@ private class KotlinColorSettingsPage : ColorSettingsPage {
   override fun getAttributeDescriptors(): Array<AttributesDescriptor> =
     arrayOf(
       AttributesDescriptor("Infix function call", KOTLIN_INFIX_FUN),
-      AttributesDescriptor("Operator function call", KOTLIN_OPERATOR_FUN)
+      AttributesDescriptor("Keyword operator function call", KOTLIN_KEYWORD_OPERATOR_FUN),
+      AttributesDescriptor("Math operator function call", KOTLIN_MATH_OPERATOR_FUN),
     )
 
   override fun getAdditionalHighlightingTagToDescriptorMap(): Map<String, TextAttributesKey> =
     mapOf(
-      "infix" to KOTLIN_INFIX_FUN,
-      "operator" to KOTLIN_OPERATOR_FUN,
+      "k-infix" to KOTLIN_INFIX_FUN,
+      "k-kw-operator" to KOTLIN_KEYWORD_OPERATOR_FUN,
+      "k-math-operator" to KOTLIN_MATH_OPERATOR_FUN,
     )
 
   override fun getDemoText(): String = """
         |fun myFunction(myValue: String, myValues: List<String>) {
-        |    if (myValue <infix>owns</infix> 'c') { }
-        |    if (myValue <operator>!in</operator> myValues) { }
+        |    if (myValue <k-infix>owns</k-infix> 'c') { }
+        |    if (myValue <k-kw-operator>!in</k-kw-operator> myValues) { }
+        |    if (myValue <k-math-operator>></k-math-operator> myValues.first()) { }
         |}
         |
         |infix fun String.owns(char: Char): Boolean = contains(char)
