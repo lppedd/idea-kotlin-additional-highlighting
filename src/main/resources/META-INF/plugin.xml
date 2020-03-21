@@ -1,0 +1,15 @@
+<!--suppress PluginXmlValidity -->
+<idea-plugin>
+  <id>org.example.untitled1</id>
+  <name>Kotlin Additional Highlighting</name>
+  <vendor email="lp.edoardo@gmail.com" url="http://www.github.com/lppedd/idea-kotlin-additional-highlighting">
+    Edoardo Luppi
+  </vendor>
+
+  <description><![CDATA[
+    Provides additional highlighting options for Kotlin language elements.
+  ]]></description>
+
+  <depends>com.intellij.modules.platform</depends>
+  <depends config-file="kotlin.xml" optional="true">org.jetbrains.kotlin</depends>
+</idea-plugin>

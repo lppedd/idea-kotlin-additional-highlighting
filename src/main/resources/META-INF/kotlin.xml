@@ -1,0 +1,7 @@
+<!--suppress PluginXmlDynamicPlugin -->
+<idea-plugin>
+  <extensions defaultExtensionNs="com.intellij">
+    <annotator language="kotlin" implementationClass="com.github.lppedd.kotlin.KotlinAnnotator" order="first" />
+    <colorSettingsPage implementation="com.github.lppedd.kotlin.KotlinColorSettingsPage" order="first" />
+  </extensions>
+</idea-plugin>
