@@ -1,4 +1,3 @@
-<!--suppress PluginXmlValidity -->
 <idea-plugin>
   <id>org.example.untitled1</id>
   <name>Kotlin Additional Highlighting</name>
