@@ -9,4 +9,4 @@ As of now the plugin provides code style customization for **infix** and **opera
 
 <img src="https://raw.githubusercontent.com/lppedd/idea-kotlin-additional-highlighting/master/images/example.png" alt="Additional code styles">
 
-[1]: https://github.com/lppedd/idea-kotlin-additional-highlighting/releases/download/0.1.0/kotlin-additional-highlighting-0.1.0.zip
+[1]: https://github.com/lppedd/idea-kotlin-additional-highlighting/releases/download/0.2.0/kotlin-additional-highlighting-0.2.0.zip
