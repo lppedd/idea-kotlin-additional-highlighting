@@ -28,4 +28,8 @@ tasks {
   }
 }
 
-tasks.getByName<PatchPluginXmlTask>("patchPluginXml") {}
+tasks.getByName<PatchPluginXmlTask>("patchPluginXml") {
+  version(project.version)
+  sinceBuild("193")
+  untilBuild(null)
+}
