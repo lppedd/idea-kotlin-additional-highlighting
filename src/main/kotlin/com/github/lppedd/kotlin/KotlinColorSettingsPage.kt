@@ -17,7 +17,7 @@ private class KotlinColorSettingsPage : ColorSettingsPage {
     KotlinHighlighter()
 
   override fun getDisplayName(): String =
-    "Kotlin - additional"
+    "Kotlin (additional)"
 
   override fun getIcon(): Icon =
     KotlinIcons.SMALL_LOGO
