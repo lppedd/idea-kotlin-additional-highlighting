@@ -1,5 +1,5 @@
 <idea-plugin>
-  <id>org.example.untitled1</id>
+  <id>com.github.lppedd.kotlin-additional-highlighting</id>
   <name>Kotlin Additional Highlighting</name>
   <vendor email="lp.edoardo@gmail.com" url="http://www.github.com/lppedd/idea-kotlin-additional-highlighting">
     Edoardo Luppi
