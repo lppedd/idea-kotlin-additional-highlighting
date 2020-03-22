@@ -14,4 +14,4 @@ As of now the plugin provides code style customization for **infix** and **opera
 <img src="https://raw.githubusercontent.com/lppedd/idea-kotlin-additional-highlighting/master/images/example.png" alt="Additional code styles">
 
 [1]: https://plugins.jetbrains.com/plugin/13979-kotlin-additional-highlighting
-[2]: https://github.com/lppedd/idea-kotlin-additional-highlighting/releases/download/0.2.1/kotlin-additional-highlighting-0.2.1.zip
+[2]: https://github.com/lppedd/idea-kotlin-additional-highlighting/releases/download/0.2.2/kotlin-additional-highlighting-0.2.2.zip
