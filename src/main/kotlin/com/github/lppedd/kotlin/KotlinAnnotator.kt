@@ -34,9 +34,6 @@ internal val KOTLIN_MATH_OPERATOR_FUN: TextAttributesKey =
  */
 private class KotlinAnnotator : Annotator {
   private val globalScheme = EditorColorsManager.getInstance().globalScheme
-  private val infixFunAttributes = globalScheme.getAttributes(KOTLIN_INFIX_FUN)
-  private val keywordOperatorFunAttributes = globalScheme.getAttributes(KOTLIN_KEYWORD_OPERATOR_FUN)
-  private val mathOperatorFunAttributes = globalScheme.getAttributes(KOTLIN_MATH_OPERATOR_FUN)
 
   override fun annotate(element: PsiElement, annotationHolder: AnnotationHolder) {
     if (element is KtOperationReferenceExpression) {
@@ -49,9 +46,9 @@ private class KotlinAnnotator : Annotator {
   private fun getTextAttributes(expr: KtOperationReferenceExpression): TextAttributes? {
     val operationSignTokenType = expr.operationSignTokenType
     return when {
-      !expr.isConventionOperator() -> infixFunAttributes
-      operationSignTokenType is KtKeywordToken -> keywordOperatorFunAttributes
-      operationSignTokenType is KtSingleValueToken -> mathOperatorFunAttributes
+      operationSignTokenType is KtKeywordToken -> KOTLIN_KEYWORD_OPERATOR_FUN.getAttributes()
+      operationSignTokenType is KtSingleValueToken -> KOTLIN_MATH_OPERATOR_FUN.getAttributes()
+      !expr.isConventionOperator() -> KOTLIN_INFIX_FUN.getAttributes()
       else -> null
     }
   }
@@ -61,4 +58,7 @@ private class KotlinAnnotator : Annotator {
       textAttributes: TextAttributes) {
     createInfoAnnotation(element, null).enforcedTextAttributes = textAttributes
   }
+
+  private fun TextAttributesKey.getAttributes(): TextAttributes =
+    globalScheme.getAttributes(this)
 }
